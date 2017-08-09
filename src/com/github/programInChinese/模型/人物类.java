@@ -22,6 +22,9 @@ public class 人物类 {
    */
   public void 置家庭关系(人物类 他人, 关系类 关系) {
     亲人.put(他人, 关系);
+    
+    // TODO: 添加反向关系
+    // 他人.亲人.put(this, 关系.取反());
   }
 
   /**
@@ -53,8 +56,8 @@ public class 人物类 {
       for (人物类 某亲人 : 亲人.keySet()) {
         List<关系类> 子关系链 = 某亲人.获取关系链(他人);
         if (!子关系链.isEmpty()) {
-          关系链.add(亲人.get(某亲人));
           关系链.addAll(子关系链);
+          关系链.add(亲人.get(某亲人));
           break;
         }
       }

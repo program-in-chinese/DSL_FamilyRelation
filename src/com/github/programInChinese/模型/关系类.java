@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public enum 关系类 {
-  爸爸, 爷爷;
+  爸爸, 儿子, 爷爷, 哥哥;
 
   private static HashMap<List<关系类>, 关系类> 简化关系表 = new HashMap<>();
   
