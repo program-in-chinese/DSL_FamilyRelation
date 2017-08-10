@@ -17,18 +17,19 @@ public enum 关系类 {
   }
   
   public static 关系类 简化关系(List<关系类> 关系链) {
-    if (简化关系表.containsKey(关系链)) {
-      return 简化关系表.get(关系链);
+    if (关系链 == null || 关系链.isEmpty()) {
+      return null;
+    } else if (关系链.size() == 1) {
+      return 关系链.get(0);
     } else {
-      if (关系链.size() > 2) {
-        关系类 关系 = 简化关系表.get(关系链.subList(0, 2));
-        if (关系 != null) {
-          List<关系类> 简化关系链 = new ArrayList<>(关系链.subList(2, 关系链.size()));
-          简化关系链.add(0, 关系);
-          return 简化关系(简化关系链);
+      关系类 关系 = 关系链.get(0);
+      for (int i = 1; i < 关系链.size(); i++) {
+        关系 = 简化关系表.get(Arrays.asList(关系, 关系链.get(i)));
+        if (关系 == null) {
+          return null;
         }
       }
+      return 关系;
     }
-    return null;
   }
 }
