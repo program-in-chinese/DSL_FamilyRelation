@@ -10,10 +10,9 @@
 	  <version>4.7</version>
 	</dependency>
 	<dependency>
-		<groupId>junit</groupId>
-		<artifactId>junit</artifactId>
-		<version>4.12</version>
-		<scope>test</scope>
+	  <groupId>com.github.program_in_chinese</groupId>
+	  <artifactId>junit4_in_chinese</artifactId>
+	  <version>0.0.1-SNAPSHOT</version>
 	</dependency>
   </dependencies>
   <build>

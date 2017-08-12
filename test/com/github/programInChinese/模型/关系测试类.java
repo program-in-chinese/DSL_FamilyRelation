@@ -1,6 +1,6 @@
 package com.github.programInChinese.模型;
 
-import static com.github.programInChinese.测试.断言.相等;
+import static com.github.program_in_chinese.junit4_in_chinese.断言类.相等;
 
 import java.util.Arrays;
 
